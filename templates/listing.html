@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block title %}wake{% endblock %}
+{% block content %}
+  {% for event in events %}
+  <li class="{{ event['kind'] }}">{{ event['summary'] }}</li>
+  {% endfor %}
+{% endblock %}
