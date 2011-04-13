@@ -14,7 +14,7 @@
     <div id="side">
       <div id="logo">
         <canvas id="logo-canvas">
-          <img src="nope"/>
+          <img src="nope" alt="chromakode logo"/>
         </canvas>
         <h1><a href="/">chromakode</a></h1>
         <div>koda</div>
@@ -33,6 +33,9 @@
         <li><a href="http://chromakode.com/shape">shape</a></li>
       </ul>
     </div>
-    {% block stream %}{% endblock %}
+    <div id="content">
+      {% block stream %}{% endblock %}
+      <a id="wake-credit" href="http://github.com/chromakode/wake/">powered by &nbsp;<img id="wake-logo" src="/static/wake.png" alt="wake logo"/></a>
+    </div>
   </body>
 </html>
