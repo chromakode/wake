@@ -1,0 +1,7 @@
+#stream { font-family:sans-serif; }
+ul#stream li { padding-left:22px; }
+
+/* TODO: embed these into the CSS */
+ul#stream li.github { background:url(/static/icon/github.ico) left center no-repeat; }
+ul#stream li.lastfm { background:url(/static/icon/lastfm.ico) left center no-repeat; }
+ul#stream li.twitter { background:url(/static/icon/twitter.ico) left center no-repeat; }
