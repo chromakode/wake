@@ -9,7 +9,7 @@ store.load()
 
 @app.route('/')
 def wake():
-    return render_template('listing.html', events=store.events())
+    return render_template('stream.html', events=store.events())
 
 if __name__ == '__main__':
     app.run(debug=True)
