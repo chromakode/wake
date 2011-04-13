@@ -1,9 +1,8 @@
 {% extends "layout.html" %}
-{% block title %}wake{% endblock %}
-{% block content %}
+{% block stream %}
 <ul id="stream">
   {% for event in events %}
-  <li class="{{ event['kind'] }}">{{ event['summary']|safe }}</li>
+    <li class="{{ event['kind'] }}">{{ event['summary']|safe }}</li>
   {% endfor %}
 </ul>
 {% endblock %}
