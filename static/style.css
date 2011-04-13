@@ -11,7 +11,7 @@ a:hover { text-decoration:underline; }
 #logo h1 { display:inline-block; font-weight:normal; font-size:16px; }
 #logo h1 a { color:#3f3f3f; text-decoration:none; }
 #logo div { position:relative; top:-8px; color:#969696; font-size:12px; }
-#logo canvas, #logo img { width:32px; height:32px; vertical-align:top; margin-top:-6px; }
+#logo canvas, #logo img { width:32px; height:32px; vertical-align:top; position:relative; top:-6px; }
 #logo { margin-bottom:5px; }
 
 #side { font-size:12px; }
