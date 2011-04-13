@@ -4,9 +4,35 @@
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>{% block title %}wake{% endblock %}</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="/static/logo.js"></script>
+    <script>
+    </script>
 {% endblock %}
   </head>
   <body>
+    <div id="side">
+      <div id="logo">
+        <canvas id="logo-canvas">
+          <img src="nope"/>
+        </canvas>
+        <h1><a href="/">chromakode</a></h1>
+        <div>koda</div>
+      </div>
+      <h2>Hello, my name is <strong>Max</strong>.<br/>I make things.</h2>
+      <ul>
+        <li><a href="/about">about</a></li>
+        <li><a href="http://github.com/chromakode">code</a></li>
+        <li><a href="/contact">contact</a></li>
+      </ul>
+
+      <h3>projects:</h3>
+      <ul>
+        <li><a href="http://usepow.com">pow</a></li>
+        <li><a href="http://usepow.com/live">code</a></li>
+        <li><a href="http://chromakode.com/shape">shape</a></li>
+      </ul>
+    </div>
     {% block stream %}{% endblock %}
   </body>
 </html>

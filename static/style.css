@@ -1,7 +1,29 @@
-#stream { font-family:sans-serif; }
-ul#stream li { padding-left:22px; }
+body { font-family:sans-serif; margin:0; background:url(/static/bg.png) #f2f2f2 left repeat-y; }
+a:link, a:visited { color:#0058c2; text-decoration:none; }
+a:visited { opacity:.5; }
+a:hover { text-decoration:underline; }
+
+#side, #stream { position:absolute; top:0; padding-top:65px; margin:0; }
+#side { width:182px; padding-right:18px; text-align:right; }
+#stream { margin-left:200px; padding-left:0px; }
+
+#logo h1, h2 { margin:0; }
+#logo h1 { display:inline-block; font-weight:normal; font-size:16px; }
+#logo h1 a { color:#3f3f3f; text-decoration:none; }
+#logo div { position:relative; top:-8px; color:#969696; font-size:12px; }
+#logo canvas, #logo img { width:32px; height:32px; vertical-align:top; margin-top:-6px; }
+#logo { margin-bottom:5px; }
+
+#side { font-size:12px; }
+h2, h3 { font-size:12px; font-weight:normal; margin:0; }
+h2 { margin-bottom:1.5em; }
+h3 { margin-top:1.5em; }
+#side ul { margin:0; }
+#side li { list-style:none; margin-top:.5em; }
+
+ul#stream li { font-size:13px; list-style:none; padding:3px 0 3px 32px; margin-bottom:5px; }
 
 /* TODO: embed these into the CSS */
-ul#stream li.github { background:url(/static/icon/github.ico) left center no-repeat; }
-ul#stream li.lastfm { background:url(/static/icon/lastfm.ico) left center no-repeat; }
-ul#stream li.twitter { background:url(/static/icon/twitter.ico) left center no-repeat; }
+ul#stream li.github { border-left:4px solid #000; background:url(/static/icon/github.ico) 5px center no-repeat; }
+ul#stream li.lastfm { border-left:4px solid #ee4229; background:url(/static/icon/lastfm.ico) 5px center no-repeat; }
+ul#stream li.twitter { border-left:4px solid #9ae4e8; background:url(/static/icon/twitter.ico) 5px center no-repeat; }
