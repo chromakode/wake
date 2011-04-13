@@ -48,6 +48,8 @@ $(document).ready(function() {
         ctx = canvas.getContext('2d');
 
     canvas.width = canvas.height = "32"
+
+    // TODO: requestFrame
     window.setInterval(function() {
         ctx.clearRect(0,0,32,32);
         var hovered = logo.hasClass('hover');
