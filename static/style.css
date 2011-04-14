@@ -1,7 +1,13 @@
 #stream { font-family:sans-serif; }
 ul#stream li { padding-left:22px; }
 
+#stream a, #stream a:visited { text-decoration:none; color:#012 }
+#stream a:hover { text-decoration:underline }
+
 /* TODO: embed these into the CSS */
 ul#stream li.github { background:url(/static/icon/github.ico) left center no-repeat; }
 ul#stream li.lastfm { background:url(/static/icon/lastfm.ico) left center no-repeat; }
 ul#stream li.twitter { background:url(/static/icon/twitter.ico) left center no-repeat; }
+ul#stream li.grooveshark { background:url(/static/icon/grooveshark.ico) left center no-repeat; }
+ul#stream li.flickr { background:url(/static/icon/flickr.ico) left center no-repeat; }
+ul#stream li.delicious { background:url(/static/icon/delicious.ico) left center no-repeat; }
