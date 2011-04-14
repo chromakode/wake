@@ -4,7 +4,7 @@ from ttp import Parser as TweetParser
 def relative_time(timestamp):
     delta = (datetime.now() - datetime.fromtimestamp(timestamp))
     delta_s = delta.days * 86400 + delta.seconds
-    if delta_s < 60: 
+    if delta_s < 60:
         return "less than a minute ago"
     elif delta_s < 120:
         return "about a minute ago"
