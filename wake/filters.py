@@ -1,5 +1,5 @@
 from datetime import datetime
-from ttp import Parser as TweetParser
+from twitter_text import TwitterText
 
 def relative_time(timestamp):
     delta = (datetime.now() - datetime.fromtimestamp(timestamp))
@@ -20,4 +20,4 @@ def relative_time(timestamp):
         return str(delta_s / 86400) + " days ago"
 
 def tweet(text):
-    return TweetParser().parse(text).html
+    return TwitterText(text).autolink.auto_link()
