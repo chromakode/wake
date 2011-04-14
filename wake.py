@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from been.couch import CouchStore
 from flask import Flask, render_template
 
