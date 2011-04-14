@@ -1,0 +1,2 @@
+recursive-include wake/static *
+recursive-include wake/templates *
