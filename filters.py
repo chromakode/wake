@@ -1,5 +1,5 @@
 from datetime import datetime
-from ttp.ttp import Parser as TweetParser
+from ttp import Parser as TweetParser
 
 def relative_time(timestamp):
     delta = (datetime.now() - datetime.fromtimestamp(timestamp))
