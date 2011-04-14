@@ -28,12 +28,13 @@ ul#stream li { font-size:13px; list-style:none; padding:3px 0 3px 32px; margin-b
 #stream a:hover { text-decoration:underline }
 
 /* TODO: embed these into the CSS */
-ul#stream li.github { background:url(/static/icon/github.ico) left center no-repeat; }
-ul#stream li.lastfm { background:url(/static/icon/lastfm.ico) left center no-repeat; }
-ul#stream li.twitter { background:url(/static/icon/twitter.ico) left center no-repeat; }
-ul#stream li.grooveshark { background:url(/static/icon/grooveshark.ico) left center no-repeat; }
-ul#stream li.flickr { background:url(/static/icon/flickr.ico) left center no-repeat; }
-ul#stream li.delicious { background:url(/static/icon/delicious.ico) left center no-repeat; }
+ul#stream li { border-left:4px solid #ccc; }
+ul#stream li.github { border-left:4px solid #000; background:url(/static/icon/github.ico) 5px center no-repeat; }
+ul#stream li.lastfm { border-left:4px solid #ee4229; background:url(/static/icon/lastfm.ico) 5px center no-repeat; }
+ul#stream li.twitter { border-left:4px solid #9ae4e8; background:url(/static/icon/twitter.ico) 5px center no-repeat; }
+ul#stream li.grooveshark { background:url(/static/icon/grooveshark.ico) 5px center no-repeat; }
+ul#stream li.flickr { background:url(/static/icon/flickr.ico) 5px center no-repeat; }
+ul#stream li.delicious { background:url(/static/icon/delicious.ico) 5px center no-repeat; }
 
 #wake-credit { opacity:.75; padding:10px; font-size:10px; }
 #wake-credit:hover { opacity:1; text-decoration:none; }
