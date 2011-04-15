@@ -1,3 +1,4 @@
+import markdown
 from datetime import datetime
 from twitter_text import TwitterText
 from flask import Markup
@@ -20,5 +21,8 @@ def relative_time(timestamp):
     else:
         return str(delta_s / 86400) + " days ago"
 
-def tweet(text):
+def markup_tweet(text):
     return Markup(TwitterText(text).autolink.auto_link())
+
+def markup_markdown(text):
+    return Markup(markdown.markdown(text))
