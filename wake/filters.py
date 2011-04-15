@@ -1,5 +1,6 @@
 from datetime import datetime
 from twitter_text import TwitterText
+from flask import Markup
 
 def relative_time(timestamp):
     delta = (datetime.now() - datetime.fromtimestamp(timestamp))
@@ -20,4 +21,4 @@ def relative_time(timestamp):
         return str(delta_s / 86400) + " days ago"
 
 def tweet(text):
-    return TwitterText(text).autolink.auto_link()
+    return Markup(TwitterText(text).autolink.auto_link())
