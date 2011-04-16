@@ -1,0 +1,5 @@
+listened to
+{% set comma = joiner(", ") %}
+{% for artist, child in event.children|groupby("artist") -%}
+  {{ comma() }}{{ artist }}
+{%- endfor %}
