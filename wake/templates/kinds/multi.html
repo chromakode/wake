@@ -1,0 +1,7 @@
+<ul>
+  {% for child in event.children %}
+    <li class="{{ child.kind }}">
+      {% include ["kinds/" + child.kind + ".html", "kinds/generic.html"] %}
+    </li>
+  {% endfor %}
+</ul>
