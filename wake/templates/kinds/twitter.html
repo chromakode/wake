@@ -1,1 +1,1 @@
-<a href="{{ event.event_link }}">{{ event.summary|safe }}</a>
+<blockquote>{{ event.data.content[0].value.partition(': ')[2]|tweet|safe }}</blockquote>
