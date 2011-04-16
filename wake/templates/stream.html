@@ -3,13 +3,12 @@
 <ul id="stream">
   {% for event in events %}
     <li class="{{ event.kind }}">
-      {% if event.children %}
+      {%- if event.children -%}
         {% include ["kinds/" + event.kind + "_multi.html", "kinds/multi.html"] %}
-      {% else %}
+      {%- else -%}
         {% include ["kinds/" + event.kind + ".html", "kinds/generic.html"] %}
-      {% endif %}
-      <time>{{ event.timestamp|relativetime }}</time>
-    </li>
+      {%- endif -%}
+      <time>{{ event.timestamp|relativetime }}</time></li>
   {% endfor %}
 </ul>
 {% endblock %}
