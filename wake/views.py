@@ -6,4 +6,4 @@ store = CouchStore().load()
 
 @app.route('/')
 def wake():
-    return render_template('stream.html', events=g.store.events())
+    return render_template('stream.html', events=store.collapsed_events())
