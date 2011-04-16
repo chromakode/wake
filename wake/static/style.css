@@ -26,6 +26,8 @@ ul#stream li { font-size:13px; list-style:none; padding:3px 0 3px 32px; margin-b
 
 #stream a, #stream a:visited { text-decoration:none; color:#012 }
 #stream a:hover { text-decoration:underline }
+#stream li time { color:#aaa; visibility:hidden; }
+#stream li:hover time { visibility:visible; }
 
 /* TODO: embed these into the CSS */
 ul#stream li { border-left:4px solid #ccc; }

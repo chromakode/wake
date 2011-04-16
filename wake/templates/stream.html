@@ -8,6 +8,7 @@
       {% else %}
         {% include ["kinds/" + event.kind + ".html", "kinds/generic.html"] %}
       {% endif %}
+      <time>{{ event.timestamp|relativetime }}</time>
     </li>
   {% endfor %}
 </ul>
