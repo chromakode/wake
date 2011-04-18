@@ -44,7 +44,7 @@ ul#stream li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no-r
 #stream li.github div a { font-weight:bold; }
 #stream li.github .message { color:#444; }
 #stream li.github .commits > ul { padding-left:0px; }
-#stream li.github .commits > ul li { font-size:.85em; border:0; padding:0 14px 0 0; margin:2px 0 0; }
+#stream li.github .commits > ul li { font-size:12px; border:0; padding:0 14px 0 0; margin:2px 0 0; }
 #stream li.github .more { display:none; }
 
 #wake-credit { opacity:.75; padding:10px; font-size:10px; }
