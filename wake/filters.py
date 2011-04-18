@@ -25,4 +25,5 @@ def markup_tweet(text):
     return Markup(TwitterText(text).autolink.auto_link())
 
 def markup_markdown(text):
-    return Markup(markdown.markdown(text))
+    md = markdown.Markdown(extensions=['meta'])
+    return Markup(md.convert(text))
