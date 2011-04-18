@@ -21,8 +21,8 @@ h3 { margin-top:1.5em; }
 #side ul { margin:0; }
 #side li { list-style:none; margin-top:.5em; }
 
-ul#stream { margin:0; padding:0; }
-ul#stream li { font-size:13px; list-style:none; padding:3px 0 3px 32px; margin-bottom:5px; }
+#stream { margin:0; padding:0; }
+#stream li { font-size:13px; list-style:none; padding:3px 0 3px 32px; margin-bottom:5px; }
 
 #stream a, #stream a:visited { text-decoration:none; color:#012 }
 #stream a:hover { text-decoration:underline }
@@ -38,6 +38,10 @@ ul#stream li.twitter { border-left:4px solid #9ae4e8; background:url(/static/ico
 ul#stream li.grooveshark { background:url(/static/icon/grooveshark.ico) 5px 3px no-repeat; }
 ul#stream li.flickr { background:url(/static/icon/flickr.ico) 5px 3px no-repeat; }
 ul#stream li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no-repeat; }
+
+#stream li.github .commits > ul { padding-left:0px; }
+#stream li.github .commits > ul li { border:0; padding:0; }
+#stream li.github .commits .more { display:none; }
 
 #wake-credit { opacity:.75; padding:10px; font-size:10px; }
 #wake-credit:hover { opacity:1; text-decoration:none; }
