@@ -28,6 +28,7 @@ h3 { margin-top:1.5em; }
 #stream a:hover { text-decoration:underline }
 #stream li time { color:#aaa; visibility:hidden; }
 #stream li:hover time { visibility:visible; }
+#stream p { margin:0; }
 #stream blockquote { margin:0; display:inline-block; }
 
 /* TODO: embed these into the CSS */
@@ -39,9 +40,12 @@ ul#stream li.grooveshark { background:url(/static/icon/grooveshark.ico) 5px 3px 
 ul#stream li.flickr { background:url(/static/icon/flickr.ico) 5px 3px no-repeat; }
 ul#stream li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no-repeat; }
 
+#stream li.github div, #stream li.github div a { color:#999; }
+#stream li.github div a { font-weight:bold; }
+#stream li.github .message { color:#444; }
 #stream li.github .commits > ul { padding-left:0px; }
-#stream li.github .commits > ul li { border:0; padding:0; }
-#stream li.github .commits .more { display:none; }
+#stream li.github .commits > ul li { font-size:.85em; border:0; padding:0 14px 0 0; margin:2px 0 0; }
+#stream li.github .more { display:none; }
 
 #wake-credit { opacity:.75; padding:10px; font-size:10px; }
 #wake-credit:hover { opacity:1; text-decoration:none; }
