@@ -2,4 +2,4 @@ listened to
 {% set comma = joiner(", ") %}
 {% for artist, child in event.children|groupby("artist") -%}
   {{ comma() }}{{ artist }}
-{%- endfor %}
+{%- endfor %} <time>{{ event.timestamp|relativetime }}</time>

@@ -7,7 +7,7 @@
         {% include ["kinds/" + event.kind + "_multi.html", "kinds/multi.html"] %}
       {%- else -%}
         {% include ["kinds/" + event.kind + ".html", "kinds/generic.html"] %}
-      {%- endif %} <time>{{ event.timestamp|relativetime }}</time></li>
+      {%- endif %}</li>
   {% endfor %}
 </ul>
 {% endblock %}
