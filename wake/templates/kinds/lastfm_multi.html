@@ -1,5 +1,5 @@
 listened to
 {% set comma = joiner(", ") %}
 {% for artist, child in event.children|groupby("artist") -%}
-  {{ comma() }}{{ artist }}
+  {{ comma() }}<a href="http://last.fm/music/{{ artist|quoteplus }}">{{ artist }}</a>
 {%- endfor %} <time>{{ event.timestamp|relativetime }}</time>
