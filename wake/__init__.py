@@ -7,6 +7,6 @@ app.jinja_env.trim_blocks = True
 app.jinja_env.filters["relativetime"] = relative_time
 app.jinja_env.filters["tweet"] = markup_tweet
 app.jinja_env.filters["markdown"] = markup_markdown
-app.jinja_env.filters["quoteplus"] = quote_plus
+app.jinja_env.filters["quoteplus"] = lambda s: quote_plus(s.encode('utf8'))
 
 import wake.views
