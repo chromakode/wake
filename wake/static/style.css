@@ -51,6 +51,10 @@ ul#stream > li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no
 #stream li.markdown blockquote h1 { font-size:2em; margin-bottom:0; }
 #stream li.markdown blockquote h2 { font-size:1.5em; margin-bottom:.5em; }
 #stream li.markdown blockquote ul { padding-left:1.5em; }
+#stream li.markdown blockquote hr { border:none; border-bottom:1px dotted #777; }
+
+/* Email obfuscation a la http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/ */
+#stream li.markdown blockquote .sdrawkcab { unicode-bidi: bidi-override; direction: rtl; }
 
 #wake-credit { opacity:.75; padding:10px; font-size:10px; }
 #wake-credit:hover { opacity:1; text-decoration:none; }
