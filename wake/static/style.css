@@ -36,7 +36,7 @@ ul#stream > li { border-left:4px solid #ccc; }
 ul#stream > li.markdown { border-left:4px solid #fe5e09; background:url(/static/favicon.png) 5px 3px no-repeat; }
 ul#stream > li.github { border-left:4px solid #000; background:url(/static/icon/github.ico) 5px 3px no-repeat; }
 ul#stream > li.lastfm { border-left:4px solid #ee4229; background:url(/static/icon/lastfm.ico) 5px 3px no-repeat; }
-ul#stream > li.twitter { border-left:4px solid #9ae4e8; background:url(/static/icon/twitter.ico) 5px 3px no-repeat; }
+ul#stream > li.twitter { border-left:4px solid #9ae4e8; background:url(/static/icon/twitter.ico) 5px 8px no-repeat; }
 ul#stream > li.grooveshark { background:url(/static/icon/grooveshark.ico) 5px 3px no-repeat; }
 ul#stream > li.flickr { background:url(/static/icon/flickr.ico) 5px 3px no-repeat; }
 ul#stream > li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no-repeat; }
@@ -47,6 +47,12 @@ ul#stream > li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no
 #stream li.github .commits > ul { padding-left:0px; }
 #stream li.github .commits > ul li { font-size:12px; list-style:none; border:0; padding:0 14px 0 0; margin:2px 0 0; }
 #stream li.github .more { display:none; }
+
+#stream li.twitter { position:relative; }
+#stream li.twitter blockquote { display:inline-block; background:#fff; border:1px solid #aaa; padding:5px; }
+#stream li.twitter blockquote:before, #stream li.twitter blockquote:after { content:''; position:absolute; display:block; border:solid 7px; }
+#stream li.twitter blockquote:before { top:10px; left:18px; border-color:transparent #aaa transparent transparent; }
+#stream li.twitter blockquote:after { top:10px; left:19px; border-color:transparent white transparent transparent; }
 
 #stream li.markdown blockquote h1 { font-size:2em; margin-bottom:0; }
 #stream li.markdown blockquote h2 { font-size:1.5em; margin-bottom:.5em; }
