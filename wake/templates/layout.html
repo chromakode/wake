@@ -3,6 +3,7 @@
   <head>
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="alternate" href="{{ url_for('recent_feed') }}" title="Recent Posts" type="application/atom+xml">
     <title>{% block title %}wake{% endblock %}</title>
 {% endblock %}
   </head>
