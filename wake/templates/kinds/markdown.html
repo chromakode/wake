@@ -1,2 +1,2 @@
 posted <a href="{{ url_for('by_slug', slug=event.slug) }}"><strong>{{ event.title }}</strong></a>
-<blockquote>{{ event.content|markdown }}</blockquote> <time>{{ event.timestamp|relativetime }}</time>
+<blockquote>{{ event.content|safe }}</blockquote> <time>{{ event.timestamp|relativetime }}</time>
