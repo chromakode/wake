@@ -54,7 +54,7 @@ ul#stream > li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no
 #stream li.twitter blockquote:before { top:10px; left:18px; border-color:transparent #aaa transparent transparent; }
 #stream li.twitter blockquote:after { top:10px; left:19px; border-color:transparent white transparent transparent; }
 
-#stream li.markdown blockquote h1 { font-size:2em; margin-bottom:0; }
+#stream li.markdown blockquote h1 { font-size:2em; margin-top:.25em; margin-bottom:0; }
 #stream li.markdown blockquote h2 { font-size:1.5em; margin-bottom:.5em; }
 #stream li.markdown blockquote ul { padding-left:1.5em; }
 #stream li.markdown blockquote hr { border:none; border-bottom:1px dotted #777; }
