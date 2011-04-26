@@ -1,0 +1,14 @@
+posted
+{% if event.children|count == 1 %}
+	{% with photo = event.children[0] %}
+		photo <a href="{{ photo.event_link }}">{{ photo.data.title }}</a>
+	{% endwith %}
+{% else %}
+	{{ event.children|count }} photos
+{% endif %}
+<time>{{ event.timestamp|relativetime }}</time>
+<p>
+	{% for child in event.children -%}
+		<a href="{{ child.event_link }}"><img src="{{ child.data.media_thumbnail[0].url }}" title="{{ child.data.title }}" /></a>
+	{%- endfor %}
+</p>
