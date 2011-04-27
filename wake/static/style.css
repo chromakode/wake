@@ -48,6 +48,8 @@ ul#stream > li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no
 #stream li.github .commits > ul li { font-size:12px; list-style:none; border:0; padding:0 14px 0 0; margin:2px 0 0; }
 #stream li.github .more { display:none; }
 
+#stream li.flickr img { margin-right:5px; }
+
 #stream li.twitter { position:relative; }
 #stream li.twitter blockquote { display:inline-block; background:#fff; border:1px solid #aaa; padding:5px; }
 #stream li.twitter blockquote:before, #stream li.twitter blockquote:after { content:''; position:absolute; display:block; border:solid 7px; }
