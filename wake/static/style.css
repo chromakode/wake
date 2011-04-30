@@ -12,3 +12,5 @@ ul#stream li.grooveshark { background:url(/static/icon/grooveshark.ico) left cen
 ul#stream li.flickr { background:url(/static/icon/flickr.ico) left center no-repeat; }
 ul#stream li.delicious { background:url(/static/icon/delicious.ico) left center no-repeat; }
 ul#stream li.markdown { background:url(/static/icon/markdown.ico) left center no-repeat; }
+ul#stream li.reddit { background:url(/static/icon/reddit.ico) left center no-repeat; }
+ul#stream li.fanfiction { background:url(/static/icon/fanfiction.ico) left center no-repeat; }
