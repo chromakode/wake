@@ -1,5 +1,5 @@
 body { font-family:sans-serif; margin:0; background:url(/static/bg.png) #f2f2f2 left repeat-y; }
-a:link, a:visited, ul#stream li.markdown blockquote a { color:#0058c2; text-decoration:none; }
+a:link, a:visited, ul#stream li.markdown blockquote a, ul#stream li.reddit a { color:#0058c2; text-decoration:none; }
 a:visited { opacity:.5; }
 a:hover { text-decoration:underline; }
 
@@ -40,6 +40,7 @@ ul#stream > li.twitter { border-left:4px solid #9ae4e8; background:url(/static/i
 ul#stream > li.grooveshark { background:url(/static/icon/grooveshark.ico) 5px 3px no-repeat; }
 ul#stream > li.flickr { border-left:4px solid #0063c8; background:url(/static/icon/flickr.ico) 5px 3px no-repeat; }
 ul#stream > li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no-repeat; }
+ul#stream > li.reddit { border-left:4px solid #ff8b60; background:url(/static/icon/reddit.ico) 5px 3px no-repeat; }
 
 #stream li.github div, #stream li.github div a { color:#999; }
 #stream li.github div a { font-weight:bold; }
