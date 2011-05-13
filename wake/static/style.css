@@ -40,7 +40,7 @@ ul#stream > li.twitter { border-left:4px solid #9ae4e8; background:url(/static/i
 ul#stream > li.grooveshark { background:url(/static/icon/grooveshark.ico) 5px 3px no-repeat; }
 ul#stream > li.flickr { border-left:4px solid #0063c8; background:url(/static/icon/flickr.ico) 5px 3px no-repeat; }
 ul#stream > li.delicious { background:url(/static/icon/delicious.ico) 5px 3px no-repeat; }
-ul#stream > li.reddit { border-left:4px solid #ff8b60; background:url(/static/icon/reddit.ico) 5px 3px no-repeat; }
+ul#stream > li.reddit { border-left:4px solid #ff8b60; background:url(/static/icon/reddit.png) 5px 3px no-repeat; }
 
 #stream li.github div, #stream li.github div a { color:#999; }
 #stream li.github div a { font-weight:bold; }
