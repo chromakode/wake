@@ -17,7 +17,6 @@ setup(
     install_requires=[
         "CouchDB",
         "Flask",
-        "twitter-text-py",
         "been",
     ],
     include_package_data=True,
