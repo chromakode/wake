@@ -1,12 +1,15 @@
-from been.couch import CouchStore
-from flask import render_template, abort, request, url_for
-from urlparse import urljoin
-from werkzeug.contrib.atom import AtomFeed
 from datetime import datetime
+from urlparse import urljoin
+
+from flask import render_template, abort, request, url_for
+from werkzeug.contrib.atom import AtomFeed
+
+from been import Been
 from wake import app
 
 
-store = CouchStore().load()
+been = Been()
+store = been.store
 
 
 @app.route('/')
