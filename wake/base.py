@@ -1,23 +1,45 @@
 from datetime import datetime
 from urlparse import urljoin
 
-from flask import render_template, abort, request, url_for
+from flask import Blueprint, render_template, abort, request, url_for
 from werkzeug.contrib.atom import AtomFeed
 
 from been import Been
-from wake import app
 
 
-been = Been()
-store = been.store
+blueprint = Blueprint('wake', __name__)
 
 
-@app.route('/')
-def wake():
+been = blueprint.been = Been()
+store = blueprint.store = been.store
+
+
+@blueprint.app_template_filter('relativetime')
+def relative_time(timestamp):
+    delta = (datetime.now() - datetime.fromtimestamp(timestamp))
+    delta_s = delta.days * 86400 + delta.seconds
+    if delta_s < 60:
+        return "less than a minute ago"
+    elif delta_s < 120:
+        return "about a minute ago"
+    elif delta_s < (60 * 60):
+        return str(delta_s / 60) + " minutes ago"
+    elif delta_s < (120 * 60):
+        return "about an hour ago"
+    elif delta_s < (24 * 60 * 60):
+        return "about " + str(delta_s / 3600) + " hours ago"
+    elif delta_s < (48 * 60 * 60):
+        return "1 day ago"
+    else:
+        return str(delta_s / 86400) + " days ago"
+
+
+@blueprint.route('/')
+def index():
     return render_template('stream.html', events=store.collapsed_events())
 
 
-@app.route('/<slug>')
+@blueprint.route('/<slug>')
 def by_slug(slug):
     events = list(store.events_by_slug(slug))
     if not events:
@@ -25,7 +47,7 @@ def by_slug(slug):
     return render_template('stream.html', events=events)
 
 
-@app.route('/recent.atom')
+@blueprint.route('/recent.atom')
 def recent_feed():
     feed = AtomFeed('Recent Posts', feed_url=request.url, url=request.url_root,
                     generator=('Wake', None, None))
