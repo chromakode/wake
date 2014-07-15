@@ -24,4 +24,4 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-app.run(host=args.host, port=args.port, debug=app.debug)
+app.run(host=args.host, port=args.port, debug=args.debug)
