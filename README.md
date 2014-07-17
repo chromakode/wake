@@ -1,4 +1,4 @@
-# wake
+![wake](https://raw.githubusercontent.com/chromakode/wake/master/art/logo.png)
 
 Wake is a minimal web view of life stream data stored in [been](https://github.com/chromakode/been). Wake is very bare-bones, intended as a vanilla scaffold to build upon, rather than a finished website.
 
