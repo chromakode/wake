@@ -39,7 +39,7 @@ def index():
     return render_template('stream.html', events=store.collapsed_events())
 
 
-@blueprint.route('/<slug>')
+@blueprint.route('/post/<slug>')
 def by_slug(slug):
     events = list(store.events_by_slug(slug))
     if not events:
