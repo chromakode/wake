@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name="wake",
     description="A simple lifestream web frontend to been.",
-    version="0.1",
+    version="0.2",
     author="Max Goodman",
     author_email="c@chromakode.com",
     keywords="feed lifestream",
