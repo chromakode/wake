@@ -59,7 +59,7 @@ def recent_feed():
                 'title': event['title'],
                 'content': unicode(event['content']),
                 'content_type': 'html',
-                'author': event.get('author', ''),
+                'author': event.get('author') or source.get('author', ''),
                 'url': urljoin(request.url_root,
                                url_for('by_slug', slug=event.get('slug', ''))),
                 'updated': datetime.fromtimestamp(event['timestamp']),
