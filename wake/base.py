@@ -49,16 +49,27 @@ def by_slug(slug):
 
 @blueprint.route('/recent.atom')
 def recent_feed():
+    entries = []
+    for source_id, source in store.get_sources().iteritems():
+        if not source.get('syndicate'):
+            continue
+
+        for event in store.events(source=source_id):
+            entries.append({
+                'title': event['title'],
+                'content': unicode(event['content']),
+                'content_type': 'html',
+                'author': event.get('author', ''),
+                'url': urljoin(request.url_root,
+                               url_for('by_slug', slug=event.get('slug', ''))),
+                'updated': datetime.fromtimestamp(event['timestamp']),
+                'published': datetime.fromtimestamp(event['timestamp']),
+            })
+
+    entries.sort(key=lambda e: e['published'], reverse=True)
+
     feed = AtomFeed('Recent Posts', feed_url=request.url, url=request.url_root,
                     generator=('Wake', None, None))
-    sources = store.get_sources()
-    for event in store.events():
-        if sources[event['source']].get('syndicate'):
-            feed.add(event['title'],
-                     unicode(event['content']),
-                     content_type='html',
-                     author=event.get('author', ''),
-                     url=urljoin(request.url_root, url_for('by_slug', slug=event.get('slug', ''))),
-                     updated=datetime.fromtimestamp(event['timestamp']),
-                     published=datetime.fromtimestamp(event['timestamp']))
+    for entry in entries:
+        feed.add(**entry)
     return feed.get_response()
